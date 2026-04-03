@@ -1,19 +1,18 @@
-# Compiler Crew - Memory Card Game Project
+# Memory Card Game – Godot
 
-## Getting started
+A simple **Memory Card Game** built with the Godot Engine.  
+Players flip cards to find matching pairs while the game tracks attempts and completion time.  
+The project is designed as a clean, beginner‑friendly example of how to structure a small game in Godot using scenes, signals, animations, and basic game logic.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Features
+- Flip‑to‑reveal card mechanic  
+- Match detection and scoring  
+- Shuffle system for random layouts  
+- Simple UI with attempts and timer  
+- Modular scene structure for easy customization  
+- Lightweight and fully open‑source
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://lv-gitlab.intern.th-ab.de/sose2025/mvp_godot_project.git
-git branch -M main
-git push -uf origin main
-```
+## Getting Started
+1. Clone the repository  
+2. Open the project in Godot  
+3. Press **Play** to start the game
