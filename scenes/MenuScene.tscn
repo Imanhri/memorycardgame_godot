@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbt4lpp6g568c"]
+
+[ext_resource type="Script" uid="uid://cqt6012k0wvcu" path="res://scripts/MenuScene.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://d3fach0b3vs1j" path="res://fonts/Xolonium-Regular.ttf" id="3_oj1bk"]
+[ext_resource type="Texture2D" uid="uid://kdjwlr7k4vn6" path="res://sprites/Backgrounds/Free-Nature-Backgrounds-Pixel-Art6.png" id="3_rvgkv"]
+[ext_resource type="Theme" uid="uid://b7b1xqarxw7ly" path="res://buttonStyle.tres" id="5_kvab8"]
+[ext_resource type="AudioStream" uid="uid://hy2doqs7i4i3" path="res://Sound/fairy-tale-loop-251859.mp3" id="6_qdg0f"]
+[ext_resource type="Texture2D" uid="uid://0uhhure4p5es" path="res://sprites/Logo.png" id="13_igwhi"]
+[ext_resource type="Texture2D" uid="uid://b0vn5oeb824hw" path="res://sprites/icon.png" id="14_t1gyk"]
+
+[node name="MenuScene" type="Node2D" groups=["menu_scene_group"]]
+script = ExtResource("1")
+metadata/_edit_horizontal_guides_ = [848.0, 700.0]
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960.699, 542.036)
+scale = Vector2(1.11861, 1.11861)
+texture = ExtResource("3_rvgkv")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(960.251, 372.188)
+scale = Vector2(0.793109, 0.79311)
+texture = ExtResource("13_igwhi")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(960, 103)
+scale = Vector2(0.139937, 0.139937)
+texture = ExtResource("14_t1gyk")
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 337.0
+offset_top = 700.0
+offset_right = 717.0
+offset_bottom = 848.0
+theme = ExtResource("5_kvab8")
+theme_override_fonts/font = ExtResource("3_oj1bk")
+theme_override_font_sizes/font_size = 55
+text = "BEENDEN"
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 767.0
+offset_top = 700.0
+offset_right = 1153.0
+offset_bottom = 849.0
+size_flags_vertical = 4
+theme = ExtResource("5_kvab8")
+theme_override_fonts/font = ExtResource("3_oj1bk")
+theme_override_font_sizes/font_size = 55
+text = "START"
+
+[node name="TutorialButton" type="Button" parent="."]
+offset_left = 1205.0
+offset_top = 701.0
+offset_right = 1593.0
+offset_bottom = 850.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_kvab8")
+theme_override_fonts/font = ExtResource("3_oj1bk")
+theme_override_font_sizes/font_size = 55
+text = "TUTORIAL"
+
+[node name="Credits" type="RichTextLabel" parent="."]
+offset_left = 489.0
+offset_top = 870.0
+offset_right = 1428.0
+offset_bottom = 1046.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_oj1bk")
+theme_override_font_sizes/normal_font_size = 35
+text = "Programmierung: Compiler Crew 
+Schriftarten: Xolonium und Retro Gaming"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qdg0f")
+autoplay = true
+parameters/looping = true
+
+[connection signal="button_down" from="QuitButton" to="." method="_on_QuitButton_button_down"]
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdwjs1dxfko14"]
+
+[ext_resource type="Script" uid="uid://cqt6012k0wvcu" path="res://scripts/MenuScene.gd" id="1_obm7m"]
+[ext_resource type="Texture2D" uid="uid://kdjwlr7k4vn6" path="res://sprites/Backgrounds/Free-Nature-Backgrounds-Pixel-Art6.png" id="2_n0rnw"]
+[ext_resource type="Texture2D" uid="uid://0uhhure4p5es" path="res://sprites/Logo.png" id="3_3mxuv"]
+[ext_resource type="Theme" uid="uid://b7b1xqarxw7ly" path="res://buttonStyle.tres" id="3_i8gnr"]
+[ext_resource type="Texture2D" uid="uid://b0vn5oeb824hw" path="res://sprites/icon.png" id="4_y4vm5"]
+[ext_resource type="FontFile" uid="uid://d3fach0b3vs1j" path="res://fonts/Xolonium-Regular.ttf" id="5_n5uf2"]
+[ext_resource type="FontFile" uid="uid://3u1vb76rt63j" path="res://fonts/Retro Gaming.ttf" id="6_082g4"]
+[ext_resource type="AudioStream" uid="uid://hy2doqs7i4i3" path="res://Sound/fairy-tale-loop-251859.mp3" id="7_kd4nu"]
+
+[node name="Themes" type="Node2D" groups=["menu_scene_group"]]
+script = ExtResource("1_obm7m")
+metadata/_edit_vertical_guides_ = [960.0]
+metadata/_edit_horizontal_guides_ = [805.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960.699, 542.036)
+scale = Vector2(1.11861, 1.11861)
+texture = ExtResource("2_n0rnw")
+
+[node name="MathThemeButton" type="Button" parent="."]
+offset_left = 1145.0
+offset_top = 705.0
+offset_right = 1444.0
+offset_bottom = 805.0
+theme = ExtResource("3_i8gnr")
+theme_override_fonts/font = ExtResource("6_082g4")
+theme_override_font_sizes/font_size = 40
+text = "MATHE"
+
+[node name="EnglishThemeButton" type="Button" parent="."]
+offset_left = 811.0
+offset_top = 705.0
+offset_right = 1110.0
+offset_bottom = 805.0
+theme = ExtResource("3_i8gnr")
+theme_override_fonts/font = ExtResource("6_082g4")
+theme_override_font_sizes/font_size = 40
+text = "ENGLISCH"
+
+[node name="GermanThemeButton" type="Button" parent="."]
+offset_left = 475.0
+offset_top = 705.0
+offset_right = 774.0
+offset_bottom = 805.0
+theme = ExtResource("3_i8gnr")
+theme_override_fonts/font = ExtResource("6_082g4")
+theme_override_font_sizes/font_size = 40
+text = "DEUTSCH"
+
+[node name="BackToMenuButton" type="Button" parent="."]
+offset_left = 812.0
+offset_top = 934.0
+offset_right = 1111.0
+offset_bottom = 1034.0
+theme = ExtResource("3_i8gnr")
+theme_override_fonts/font = ExtResource("6_082g4")
+theme_override_font_sizes/font_size = 24
+text = "ZURÜCK ZUM MENÜ"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(960, 372.188)
+scale = Vector2(0.793, 0.793)
+texture = ExtResource("3_3mxuv")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(960, 103)
+scale = Vector2(0.139937, 0.139937)
+texture = ExtResource("4_y4vm5")
+
+[node name="Credits" type="RichTextLabel" parent="."]
+offset_left = 489.0
+offset_top = 827.0
+offset_right = 1428.0
+offset_bottom = 923.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("5_n5uf2")
+theme_override_font_sizes/normal_font_size = 35
+text = "Programmierung: Compiler Crew 
+Schriftarten: Xolonium und Retro Gaming"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_kd4nu")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="MathThemeButton" to="." method="_on_math_theme_button_pressed"]
+[connection signal="pressed" from="EnglishThemeButton" to="." method="_on_english_theme_button_pressed"]
+[connection signal="pressed" from="GermanThemeButton" to="." method="_on_german_theme_button_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

@@ -1,0 +1,445 @@
+[gd_scene load_steps=17 format=3 uid="uid://ig6x5l7v2qu1"]
+
+[ext_resource type="Script" uid="uid://bkv73ud2wc8qg" path="res://scripts/GameManager_English.gd" id="1_361mg"]
+[ext_resource type="Script" uid="uid://bxx635x06qf46" path="res://scripts/card_english.gd" id="2_361mg"]
+[ext_resource type="FontFile" uid="uid://3u1vb76rt63j" path="res://fonts/Retro Gaming.ttf" id="3_mk8qf"]
+[ext_resource type="Script" uid="uid://cjjmt13kkpwde" path="res://scripts/CardOneName.gd" id="4_ey0k6"]
+[ext_resource type="Script" uid="uid://mp85rnpsfh2w" path="res://scripts/CardTwoName.gd" id="5_rrryw"]
+[ext_resource type="Theme" uid="uid://b7b1xqarxw7ly" path="res://buttonStyle.tres" id="6_55yfu"]
+[ext_resource type="Texture2D" uid="uid://cvw12tqk75mwc" path="res://sprites/Backgrounds/Free-Summer-Pixel-Art-Backgrounds5.jpg" id="8_dbid2"]
+[ext_resource type="AudioStream" uid="uid://bkwmwjcjq5a2e" path="res://Sound/mixkit-winning-a-coin-video-game-2069.wav" id="8_ey0k6"]
+[ext_resource type="AudioStream" uid="uid://bv66j15cw7ytf" path="res://Sound/game-music-loop-3-144252.mp3" id="8_rrryw"]
+[ext_resource type="Texture2D" uid="uid://3bhp2e5yeyx0" path="res://sprites/home.png" id="10_dbid2"]
+[ext_resource type="Texture2D" uid="uid://b22yttnd16hht" path="res://sprites/arrow.png" id="11_nk4kx"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(503.378, 500.964)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nk4kx"]
+bg_color = Color(0.12549, 0.258824, 0.435294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.343649, 0.548018, 0.822694, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_aqsit"]
+Panel/styles/panel = SubResource("StyleBoxFlat_nk4kx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbid2"]
+bg_color = Color(0.12549, 0.258824, 0.435294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_nk4kx"]
+Panel/styles/panel = SubResource("StyleBoxFlat_dbid2")
+
+[node name="GameManger3" type="Node2D"]
+position = Vector2(90, 0)
+script = ExtResource("1_361mg")
+metadata/_edit_vertical_guides_ = [435.0, 1486.0]
+metadata/_edit_horizontal_guides_ = [851.0, 951.0]
+
+[node name="Card1" type="Area2D" parent="."]
+position = Vector2(960, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card1"]
+shape = SubResource("1")
+
+[node name="Card17" type="Area2D" parent="."]
+position = Vector2(1140, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card17"]
+shape = SubResource("1")
+
+[node name="Card9" type="Area2D" parent="."]
+position = Vector2(600, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card9"]
+shape = SubResource("1")
+
+[node name="Card5" type="Area2D" parent="."]
+position = Vector2(780, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card5"]
+shape = SubResource("1")
+
+[node name="Card24" type="Area2D" parent="."]
+position = Vector2(1320, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card24"]
+shape = SubResource("1")
+
+[node name="Card16" type="Area2D" parent="."]
+position = Vector2(420, 180)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card16"]
+shape = SubResource("1")
+
+[node name="Card2" type="Area2D" parent="."]
+position = Vector2(960, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card2"]
+shape = SubResource("1")
+
+[node name="Card18" type="Area2D" parent="."]
+position = Vector2(1140, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card18"]
+shape = SubResource("1")
+
+[node name="Card10" type="Area2D" parent="."]
+position = Vector2(600, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card10"]
+shape = SubResource("1")
+
+[node name="Card6" type="Area2D" parent="."]
+position = Vector2(780, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card6"]
+shape = SubResource("1")
+
+[node name="Card23" type="Area2D" parent="."]
+position = Vector2(1320, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card23"]
+shape = SubResource("1")
+
+[node name="Card15" type="Area2D" parent="."]
+position = Vector2(420, 360)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card15"]
+shape = SubResource("1")
+
+[node name="Card3" type="Area2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card3"]
+shape = SubResource("1")
+
+[node name="Card19" type="Area2D" parent="."]
+position = Vector2(1140, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card19"]
+shape = SubResource("1")
+
+[node name="Card11" type="Area2D" parent="."]
+position = Vector2(600, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card11"]
+shape = SubResource("1")
+
+[node name="Card7" type="Area2D" parent="."]
+position = Vector2(780, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card7"]
+shape = SubResource("1")
+
+[node name="Card21" type="Area2D" parent="."]
+position = Vector2(1320, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card21"]
+shape = SubResource("1")
+
+[node name="Card13" type="Area2D" parent="."]
+position = Vector2(420, 540)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card13"]
+shape = SubResource("1")
+
+[node name="Card4" type="Area2D" parent="."]
+position = Vector2(960, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card4"]
+shape = SubResource("1")
+
+[node name="Card20" type="Area2D" parent="."]
+position = Vector2(1140, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card20"]
+shape = SubResource("1")
+
+[node name="Card12" type="Area2D" parent="."]
+position = Vector2(600, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card12"]
+shape = SubResource("1")
+
+[node name="Card8" type="Area2D" parent="."]
+position = Vector2(780, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card8"]
+shape = SubResource("1")
+
+[node name="Card22" type="Area2D" parent="."]
+position = Vector2(1320, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card22"]
+shape = SubResource("1")
+
+[node name="Card14" type="Area2D" parent="."]
+position = Vector2(420, 720)
+scale = Vector2(0.3, 0.3)
+gravity = 98.0
+script = ExtResource("2_361mg")
+
+[node name="Sprite" type="Sprite2D" parent="Card14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card14"]
+shape = SubResource("1")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(870.6, 541.5)
+scale = Vector2(1.12293, 1.12293)
+texture = ExtResource("8_dbid2")
+
+[node name="MatchSoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ey0k6")
+volume_db = 11.0
+
+[node name="BackgroundSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_rrryw")
+autoplay = true
+parameters/looping = true
+
+[node name="BackToMenuButton" type="Button" parent="."]
+offset_left = 195.0
+offset_top = 851.0
+offset_right = 291.0
+offset_bottom = 951.0
+theme = ExtResource("6_55yfu")
+theme_override_fonts/font = ExtResource("3_mk8qf")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("10_dbid2")
+icon_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 78.0
+offset_top = 851.0
+offset_right = 174.0
+offset_bottom = 951.0
+theme = ExtResource("6_55yfu")
+theme_override_fonts/font = ExtResource("3_mk8qf")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("11_nk4kx")
+icon_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 348.0
+offset_top = 325.0
+offset_right = 1395.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -15
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_mk8qf")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardOneName" type="RichTextLabel" parent="."]
+offset_left = 362.0
+offset_top = 858.0
+offset_right = 962.0
+offset_bottom = 958.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 50
+text = "Karte 1: Name"
+script = ExtResource("4_ey0k6")
+
+[node name="CardTwoName" type="RichTextLabel" parent="."]
+offset_left = 967.0
+offset_top = 858.0
+offset_right = 1567.0
+offset_bottom = 958.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 50
+text = "Karte 1: Name"
+script = ExtResource("5_rrryw")
+
+[node name="CheckBox" type="RichTextLabel" parent="."]
+offset_left = 896.0
+offset_top = 858.0
+offset_right = 996.0
+offset_bottom = 958.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 50
+text = "?"
+
+[node name="NumberOfMatches" type="RichTextLabel" parent="."]
+offset_left = 365.0
+offset_top = 962.0
+offset_right = 965.0
+offset_bottom = 1022.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 28
+text = "Anzahl der Übereinstimmungen: 0"
+
+[node name="TimerLabel" type="RichTextLabel" parent="."]
+offset_left = 365.0
+offset_top = 925.0
+offset_right = 965.0
+offset_bottom = 965.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 28
+text = "Zeit: 0 Sekunden"
+
+[node name="AttemptsLabel" type="RichTextLabel" parent="."]
+offset_left = 365.0
+offset_top = 995.0
+offset_right = 965.0
+offset_bottom = 1035.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_mk8qf")
+theme_override_font_sizes/normal_font_size = 28
+text = "Versuche: 0"
+
+[node name="CongratePanel" type="Panel" parent="."]
+visible = false
+z_index = -5
+offset_left = 345.0
+offset_top = 292.0
+offset_right = 1396.0
+offset_bottom = 622.0
+theme = SubResource("Theme_aqsit")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -5
+offset_left = 345.0
+offset_top = 851.0
+offset_right = 1396.0
+offset_bottom = 1043.0
+theme = SubResource("Theme_nk4kx")
+
+[connection signal="button_down" from="BackToMenuButton" to="." method="_on_back_to_menu_button_button_down"]
+[connection signal="button_down" from="BackButton" to="." method="_on_back_button_button_down"]
