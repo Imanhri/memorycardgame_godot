@@ -1,4 +1,4 @@
-# Memory Card Game – Godot
+# Klick dich schlau: A memory card game created with the Godot engine
 
 A simple **Memory Card Game** called "Klick dich schlau", built with the Godot Engine.  
 Players flip cards to find matching pairs while the game tracks attempts and completion time.  
